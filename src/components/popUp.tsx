@@ -12,6 +12,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 import RouterLink from './RouterLink'
+import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
     rootList: {
       width: '100%',
       maxWidth: 150,
+      marginRight:'5px',
       backgroundColor: theme.palette.background.paper,
     },
     nested: {
@@ -73,6 +75,7 @@ export default function FullScreenDialog(Props: IAppProps) {
             </Button>
           </Toolbar>
         </AppBar>
+        <div style={{display:'flex',flex:1}}>
         <div>
 
           <List
@@ -87,6 +90,11 @@ export default function FullScreenDialog(Props: IAppProps) {
             primary='devices'
             />
           </List>
+        </div>
+        <Divider orientation='vertical'/>
+        <div style={{padding:'0 30px'}}>
+          hello world ph
+        </div>
         </div>
       </Dialog>
     </div>
